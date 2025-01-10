@@ -21,7 +21,7 @@ function getElementById(Element) {
 // create random alphabet
 function createRandomAlphabet() {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    const splitAlphabet = alphabet.split("");
+    const splitAlphabet = alphabet.split('');
     const randomNumber = Math.random() * 25;
     const index = Math.round(randomNumber);
     const randomAlphabet = splitAlphabet[index];

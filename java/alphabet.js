@@ -4,12 +4,13 @@ function playWithKey() {
     const displayKey = getElementById('display-letter');
     const keyNeed = displayKey.toLowerCase();
     if (keyPressed === keyNeed) {
-        displayAlphabet()
+        
         const backgroundremove = removeBacgroundColor(keyNeed);
         const currentScorText = getElementById('display-score');
         const currentScor = parseInt(currentScorText);
         const lastScor = currentScor + 1;
         setElementById('display-score',lastScor)
+        displayAlphabet()
     }
     else {
         alert("are vai apni to vul chapsen")
@@ -31,7 +32,7 @@ function displayAlphabet() {
     getElement.innerText = randomAlphabet;
 
     // key background color change
-    const backgroundColorChange = setBacgroundColor(randomAlphabet);
+    setBacgroundColor(randomAlphabet);
 }
 
 function play() {
