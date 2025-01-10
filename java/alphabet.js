@@ -12,6 +12,7 @@ function playWithKey() {
         setElementById('display-score',lastScor)
     }
     else {
+        // alert("are vai apni to vul chapsen")
         const currentLife = getElementById('display-life');
         const ShowLife = currentLife - 1;
         setElementById ('display-life', ShowLife);
@@ -36,9 +37,19 @@ function displayAlphabet() {
 function play() {
     addClassListById('home-screen');
     removeClassListById('playground-screen');
+    addClassListById('score-screen');
     displayAlphabet()
+
+    setElementById('display-score',0);
+    setElementById ('display-life', 5);
 }
 function gameover(){
     addClassListById('playground-screen')
     removeClassListById ('score-screen')
+    
+    const lastScore = getElementById('display-score');
+    setElementById ('last-point', lastScore);
+
+    const currentAlphabet = getElementById('display-letter');
+    removeBacgroundColor(currentAlphabet);
 }
