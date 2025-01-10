@@ -12,7 +12,7 @@ function playWithKey() {
         setElementById('display-score',lastScor)
     }
     else {
-        // alert("are vai apni to vul chapsen")
+        alert("are vai apni to vul chapsen")
         const currentLife = getElementById('display-life');
         const ShowLife = currentLife - 1;
         setElementById ('display-life', ShowLife);
