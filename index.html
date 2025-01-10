@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css">
     <title>alphabet game</title>
 </head>
+
 <body>
-    
+    <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center ">
+        <section id="home-screen" class=" min-h-screen flex flex-col justify-center hidden">
+            <div class="flex flex-col items-center gap-8">
+                <h1 class="anton-regular text-9xl text-cyan-50">ALPHABET CLASH</h1>
+                <p class=" text-cyan-50">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <div>
+                    <button class="btn">Button</button>
+                </div>
+            </div>
+        </section>
+        <section id="playground-screen" class="flex flex-col min-h-screen items-center gap-20 pt-20">
+            <div class="">
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] rounded-2xl bg-[#FFFFFFB3]">
+                    812×375</div>
+            </div>
+            <div>
+                <div class="my-1 flex w-full justify-center gap-3">
+                    <kbd class="kbd">q</kbd>
+                    <kbd class="kbd">w</kbd>
+                    <kbd class="kbd">e</kbd>
+                    <kbd class="kbd">r</kbd>
+                    <kbd class="kbd">t</kbd>
+                    <kbd class="kbd">y</kbd>
+                    <kbd class="kbd">u</kbd>
+                    <kbd class="kbd">i</kbd>
+                    <kbd class="kbd">o</kbd>
+                    <kbd class="kbd">p</kbd>
+                </div>
+                <div class="my-1 flex w-full justify-center gap-3 pt-2">
+                    <kbd class="kbd">a</kbd>
+                    <kbd class="kbd">s</kbd>
+                    <kbd class="kbd">d</kbd>
+                    <kbd class="kbd">f</kbd>
+                    <kbd class="kbd">g</kbd>
+                    <kbd class="kbd">h</kbd>
+                    <kbd class="kbd">j</kbd>
+                    <kbd class="kbd">k</kbd>
+                    <kbd class="kbd">l</kbd>
+                </div>
+                <div class="my-1 flex w-full justify-center gap-3 pt-2">
+                    <kbd class="kbd">z</kbd>
+                    <kbd class="kbd">x</kbd>
+                    <kbd class="kbd">c</kbd>
+                    <kbd class="kbd">v</kbd>
+                    <kbd class="kbd">b</kbd>
+                    <kbd class="kbd">n</kbd>
+                    <kbd class="kbd">m</kbd>
+                    <kbd class="kbd">/</kbd>
+                </div>
+            </div>
+            <div class=" flex justify-between w-3/4">
+                <button class="btn btn-primary rounded-full">
+                    life
+                    <img src="images/Group 23.svg" alt="" srcset="">
+                    <span>5</span>
+                </button>
+                <button class="btn btn-primary rounded-full">
+                    score
+                    <img src="images/monetization_on.svg" alt="" srcset="">
+                    <span>0</span>
+                </button>
+            </div>
+        </section>
+        <section id="score-screen">
+
+        </section>
+    </main>
+
+    <script src="java/alphabet.js"></script>
+    <script src="java/utility.js"></script>
 </body>
+
 </html>
