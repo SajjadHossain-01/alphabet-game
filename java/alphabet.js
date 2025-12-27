@@ -4,21 +4,26 @@ function playWithKey() {
     const displayKey = getElementById('display-letter');
     const keyNeed = displayKey.toLowerCase();
     if (keyPressed === keyNeed) {
-        
+
         const backgroundremove = removeBacgroundColor(keyNeed);
         const currentScorText = getElementById('display-score');
         const currentScor = parseInt(currentScorText);
         const lastScor = currentScor + 1;
-        setElementById('display-score',lastScor)
+        setElementById('display-score', lastScor)
         displayAlphabet()
     }
     else {
-        alert("are vai apni to vul chapsen")
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            
+        });
         const currentLife = getElementById('display-life');
         const ShowLife = currentLife - 1;
-        setElementById ('display-life', ShowLife);
+        setElementById('display-life', ShowLife);
 
-        if (ShowLife === 0){
+        if (ShowLife === 0) {
             gameover()
         }
     }
@@ -41,15 +46,15 @@ function play() {
     addClassListById('score-screen');
     displayAlphabet()
 
-    setElementById('display-score',0);
-    setElementById ('display-life', 5);
+    setElementById('display-score', 0);
+    setElementById('display-life', 5);
 }
-function gameover(){
+function gameover() {
     addClassListById('playground-screen')
-    removeClassListById ('score-screen')
-    
+    removeClassListById('score-screen')
+
     const lastScore = getElementById('display-score');
-    setElementById ('last-point', lastScore);
+    setElementById('last-point', lastScore);
 
     const currentAlphabet = getElementById('display-letter');
     removeBacgroundColor(currentAlphabet);
